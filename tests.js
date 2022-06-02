@@ -7,6 +7,7 @@ import {
     lessThanHundred,
     formatName,
     evenOrOdd,
+    rockPaperScissors,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -159,6 +160,17 @@ test('is number odd - yes', (expect) => {
     Uses: comparison operator, if/else control flow
 
 */
+// test('rock paper scissors', (expect) => {
+  //  const rock = 'rock';
+    //const paper = 'scissors';
+    //const scissors = 'scissors';
+
+    //const actualOne = rockPaperScissors(rock + scissors);
+    //const actualTwo = rockPaperScissors()
+
+
+
+});
 
 /* 
     Write a function that takes in a first, last, and a third optional
