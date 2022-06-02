@@ -33,5 +33,14 @@ export function formatName(first, last, middle) {
     name = name + ' ' + last;
 
     return name;
+}
+
+export function evenOrOdd(num) {
+    if (num % 2 === 0) {
+        return 'even';
+    }
+    else {
+        return 'odd';
+    }
 
 }

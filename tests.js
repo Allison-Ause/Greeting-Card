@@ -6,6 +6,7 @@ import {
     areaOfTriangle,
     lessThanHundred,
     formatName,
+    evenOrOdd,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -126,6 +127,22 @@ test('evaluates if two number sum is greater or less than zero', (expect) => {
 
     if(num % 2 === 0)
 */
+test('is number even - yes', (expect) => {
+    const num = 10;
+
+    const actual = evenOrOdd(num);
+
+    expect.equal(actual, 'even');
+});
+
+test('is number odd - yes', (expect) => {
+    const num = 7;
+
+    const actual = evenOrOdd(num);
+
+    expect.equal(actual, 'odd');
+
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws
