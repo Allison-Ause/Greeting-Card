@@ -24,3 +24,14 @@ export function lessThanHundred(a, b) {
     return add(a, b) < 100;
 }
 
+export function formatName(first, last, middle) {
+    let name = first;
+
+    if (middle) {
+        name = name + ' ' + middle;
+    }
+    name = name + ' ' + last;
+
+    return name;
+
+}

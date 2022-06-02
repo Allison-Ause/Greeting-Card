@@ -5,6 +5,7 @@ import {
     convertToSeconds,
     areaOfTriangle,
     lessThanHundred,
+    formatName,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -139,6 +140,7 @@ test('evaluates if two number sum is greater or less than zero', (expect) => {
     'player 1 wins', 'player 2 wins', 'players draw'
 
     Uses: comparison operator, if/else control flow
+
 */
 
 /* 
@@ -150,7 +152,33 @@ test('evaluates if two number sum is greater or less than zero', (expect) => {
 
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
+
+    --conditional logic and string concatenation
+    --adding strings together; test is did we get a middle name? Input could be two parts or have a third middle part
 */
+test('formats a two part name', (expect) => {
+    const first = 'Ruth';
+    const last = 'Ginsburg';
+
+    const actual = formatName(first, last);
+
+    expect.equal(formatName(first, last), 'Ruth Ginsburg');
+
+});
+
+test('formats a three part name', (expect) => {
+
+    const first = 'Ruth';
+    const last = 'Ginsburg';
+    const middle = 'Bader';
+
+
+    const actual = formatName(first, last);
+
+    expect.equal(formatName(first, last), 'Ruth Ginsburg');
+    expect.equal(formatName(first, last, middle), 'Ruth Bader Ginsburg');   
+});
+
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
