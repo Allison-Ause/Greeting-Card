@@ -2,7 +2,8 @@
 import {
     add,
     subtract,
-    multiply,
+    convertToSeconds,
+    areaOfTriangle,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -59,11 +60,10 @@ test('subtracts two numbers', (expect) => {
     Uses: Math operator(s)
 */
 test('converts minutes to seconds', (expect) => {
-    const x = 10;
-    const y = 60;
+    const minutes = 10;
     const expected = 600;
 
-    const actual = multiply(x, y);
+    const actual = convertToSeconds(minutes);
 
     expect.equal(actual, expected);
 
@@ -76,7 +76,16 @@ test('converts minutes to seconds', (expect) => {
 
     Uses: Math operator(s)
 */
+test('calculates area of triangle', (expect) => {
+    const base = 10;
+    const height = 10;
+    const expected = 50;
 
+    const actual = areaOfTriangle(base, height);
+
+    expect.equal(actual, expected);
+
+});
 /* 
     Write a function that takes in two 2 numbers
     and returns true if their sum is less than 100 or 
@@ -87,6 +96,12 @@ test('converts minutes to seconds', (expect) => {
     88, 60 --> false
 
     Uses: Comparison operator(s), if/else control flow
+    if(sum < 100) {
+            return true;
+    }
+    else {
+        return false;
+    }
 */
 
 /* 
@@ -97,6 +112,8 @@ test('converts minutes to seconds', (expect) => {
     6 --> 'even'
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
+
+    if(num % 2 === 0)
 */
 
 /* 
