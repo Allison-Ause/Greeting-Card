@@ -4,6 +4,7 @@ import {
     subtract,
     convertToSeconds,
     areaOfTriangle,
+    lessThanHundred,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -103,6 +104,15 @@ test('calculates area of triangle', (expect) => {
         return false;
     }
 */
+test('evaluates if two number sum is greater or less than zero', (expect) => {
+    const a = 50;
+    const b = 30;
+    const expected = true;
+
+    const actual = lessThanHundred(a, b);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes a number and

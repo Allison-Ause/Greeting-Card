@@ -19,3 +19,8 @@ export function convertToSeconds(minutes) {
 export function areaOfTriangle(base, height) {
     return (base * height) / 2;
 }
+
+export function lessThanHundred(a, b) {
+    return add(a, b) < 100;
+}
+
