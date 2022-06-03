@@ -6,8 +6,7 @@ import {
     areaOfTriangle,
     lessThanHundred,
     formatName,
-    evenOrOdd,
-    rockPaperScissors,
+    evenOrOdd
 } from './functions.js';
 
 const test = QUnit.test;
@@ -167,10 +166,6 @@ test('is number odd - yes', (expect) => {
 
     //const actualOne = rockPaperScissors(rock + scissors);
     //const actualTwo = rockPaperScissors()
-
-
-
-//});
 
 /* 
     Write a function that takes in a first, last, and a third optional
