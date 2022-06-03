@@ -184,10 +184,7 @@ test('formats a two part name', (expect) => {
     const first = 'Ruth';
     const last = 'Ginsburg';
 
-    const actual = formatName(first, last);
-
     expect.equal(formatName(first, last), 'Ruth Ginsburg');
-
 });
 
 test('formats a three part name', (expect) => {
@@ -195,9 +192,6 @@ test('formats a three part name', (expect) => {
     const first = 'Ruth';
     const last = 'Ginsburg';
     const middle = 'Bader';
-
-
-    const actual = formatName(first, last);
 
     expect.equal(formatName(first, last), 'Ruth Ginsburg');
     expect.equal(formatName(first, last, middle), 'Ruth Bader Ginsburg');   
