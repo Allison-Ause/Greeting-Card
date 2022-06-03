@@ -1,6 +1,12 @@
 // IMPORT MODULES under test here:
 import {
     add,
+    subtract,
+    convertToSeconds,
+    areaOfTriangle,
+    lessThanHundred,
+    formatName,
+    evenOrOdd
 } from './functions.js';
 
 const test = QUnit.test;
@@ -38,6 +44,15 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator
 */
+test('subtracts two numbers', (expect) => {
+    const x = 10;
+    const y = 5;
+    const expected = 5;
+
+    const actual = subtract(x, y);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes in number of minutes
@@ -47,7 +62,15 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+test('converts minutes to seconds', (expect) => {
+    const minutes = 10;
+    const expected = 600;
 
+    const actual = convertToSeconds(minutes);
+
+    expect.equal(actual, expected);
+
+});
 /* 
     Write a function that takes in the base and height
     of a triangle and returns its area (google it)
@@ -56,7 +79,16 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+test('calculates area of triangle', (expect) => {
+    const base = 10;
+    const height = 10;
+    const expected = 50;
 
+    const actual = areaOfTriangle(base, height);
+
+    expect.equal(actual, expected);
+
+});
 /* 
     Write a function that takes in two 2 numbers
     and returns true if their sum is less than 100 or 
@@ -67,7 +99,22 @@ test('adds two numbers', (expect) => {
     88, 60 --> false
 
     Uses: Comparison operator(s), if/else control flow
+    if(sum < 100) {
+            return true;
+    }
+    else {
+        return false;
+    }
 */
+test('evaluates if two number sum is greater or less than zero', (expect) => {
+    const a = 50;
+    const b = 30;
+    const expected = true;
+
+    const actual = lessThanHundred(a, b);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes a number and
@@ -77,7 +124,25 @@ test('adds two numbers', (expect) => {
     6 --> 'even'
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
+
+    if(num % 2 === 0)
 */
+test('is number even - yes', (expect) => {
+    const num = 10;
+
+    const actual = evenOrOdd(num);
+
+    expect.equal(actual, 'even');
+});
+
+test('is number odd - yes', (expect) => {
+    const num = 7;
+
+    const actual = evenOrOdd(num);
+
+    expect.equal(actual, 'odd');
+
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws
@@ -92,7 +157,15 @@ test('adds two numbers', (expect) => {
     'player 1 wins', 'player 2 wins', 'players draw'
 
     Uses: comparison operator, if/else control flow
+
 */
+// test('rock paper scissors', (expect) => {
+  //  const rock = 'rock';
+    //const paper = 'scissors';
+    //const scissors = 'scissors';
+
+    //const actualOne = rockPaperScissors(rock + scissors);
+    //const actualTwo = rockPaperScissors()
 
 /* 
     Write a function that takes in a first, last, and a third optional
@@ -103,7 +176,27 @@ test('adds two numbers', (expect) => {
 
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
+
+    --conditional logic and string concatenation
+    --adding strings together; test is did we get a middle name? Input could be two parts or have a third middle part
 */
+test('formats a two part name', (expect) => {
+    const first = 'Ruth';
+    const last = 'Ginsburg';
+
+    expect.equal(formatName(first, last), 'Ruth Ginsburg');
+});
+
+test('formats a three part name', (expect) => {
+
+    const first = 'Ruth';
+    const last = 'Ginsburg';
+    const middle = 'Bader';
+
+    expect.equal(formatName(first, last), 'Ruth Ginsburg');
+    expect.equal(formatName(first, last, middle), 'Ruth Bader Ginsburg');   
+});
+
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
